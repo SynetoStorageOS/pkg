@@ -353,7 +353,5 @@ license cr_Oracle license=cr_Oracle
 license lic_gustaebel license=lic_gustaebel
 license lic_minisat license=lic_minisat
 depend type=optional fmri=install/beadm@0.5.11,5.11-0.151.0.1.13
-depend type=optional fmri=package/pkg/package-manager@$(PKGVERS)
-depend type=optional fmri=package/pkg/update-manager@$(PKGVERS)
 depend type=optional fmri=system/zones/brand/ipkg@$(PKGVERS)
 depend type=require fmri=crypto/ca-certificates
