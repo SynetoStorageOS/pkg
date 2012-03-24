@@ -19,6 +19,7 @@
 # CDDL HEADER END
 #
 # Copyright (c) 2010, 2011, Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2012, OmniTI Computer Consulting, Inc. All rights reserved.
 #
 
 PKGVERS_COMPONENT = 0.5.11
@@ -28,8 +29,10 @@ UPDATENUM         = 0
 SRUNUM            = 0
 PLATNUM           = 0
 BUILDID           = 0
-NIGHTLYID:sh      = hg parents --template '{rev}'
-CHANGESET.cmd     = hg id -i
+#NIGHTLYID:sh      = hg parents --template '{rev}'
+NIGHTLYID         = 1
+#CHANGESET.cmd     = hg id -i
+CHANGESET.cmd     = git show --abbrev-commit | head -1 | awk '{print $2;}'
 CHANGESET         = $(CHANGESET.cmd:sh)
 CURBUILD.cmd      = \
 	$(PKG) -R / list -H osnet-incorporation | \
