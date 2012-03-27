@@ -701,10 +701,10 @@ class build_func(_build):
                 _build.initialize_options(self)
                 self.build_base = build_dir
 
-def get_hg_version():
+def get_git_version():
         try:
-                p = subprocess.Popen(['hg', 'id', '-i'], stdout = subprocess.PIPE)
-                return p.communicate()[0].strip()
+                p = subprocess.Popen(['git', 'show', '--format=%at'], stdout = subprocess.PIPE)
+                return p.communicate()[0].split('\n')[0].strip()
         except OSError:
                 print >> sys.stderr, "ERROR: unable to obtain mercurial version"
                 return "unknown"
@@ -804,7 +804,7 @@ class build_py_func(_build_py):
                                 ov = re.search(versionre, ocontent).group(1)
                         except IOError:
                                 ov = None
-                        v = get_hg_version()
+                        v = get_git_version()
                         vstr = 'VERSION = "%s"' % v
                         # If the versions haven't changed, there's no need to
                         # recompile.
