@@ -1053,7 +1053,6 @@ depend compress/p7zip
 depend compress/unzip
 depend compress/zip
 depend consolidation/osnet/osnet-message-files
-depend crypto/ca-certificates
 depend crypto/gnupg
 depend crypto/pwgen
 depend data/docbook
@@ -2781,5 +2780,6 @@ depend system/trusted/trusted-nonglobal
 $(i386_ONLY)depend system/xvm
 $(i386_ONLY)depend system/xvm/xvm-gui
 depend web/amp
+depend web/ca-bundle
 depend x11/server/xorg/driver/xorg-video
 end package

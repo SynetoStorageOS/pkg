@@ -460,7 +460,6 @@ depend compress/gzip
 depend compress/p7zip
 depend compress/unzip
 depend compress/zip
-depend crypto/ca-certificates
 depend crypto/gnupg
 depend data/iso-codes
 depend database/sqlite-3
@@ -1187,6 +1186,7 @@ depend web/browser/firefox/locale/zh_cn
 depend web/browser/firefox/locale/zh_tw
 depend web/browser/firefox/plugin/firefox-java
 depend web/browser/w3m
+depend web/ca-bundle
 depend web/curl
 depend web/data/firefox-bookmarks
 depend web/wget

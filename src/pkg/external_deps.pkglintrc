@@ -12,7 +12,7 @@ pkglint.action005.1.missing-deps =
     pkg:/SUNWcs
     pkg:/archiver/gnu-tar
     pkg:/communication/im/pidgin
-    pkg:/crypto/ca-certificates
+    pkg:/web/ca-bundle
     pkg:/desktop/gksu
     pkg:/desktop/administration/gnome-system-tools
     pkg:/desktop/archive-manager/file-roller
